@@ -1,6 +1,9 @@
-import themes from './hueThemes.js'
-import changeLights from './hueControls.js'
 import ComfyJS from 'comfy.js'
+import themes from './Lights/hueThemes.js'
+import changeLights from './Lights/hueControls.js'
+import shoutouts from './Shoutouts/shoutouts.js'
+
+console.log(shoutouts)
 
 const themeNames = ['fairfax', 'osaka', 'tokyo', 'motown', 'starlight']
 ComfyJS.onChat = ( user, message, flags, self, extra ) => {
