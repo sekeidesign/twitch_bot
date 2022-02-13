@@ -31,10 +31,10 @@ const shoutouts = {
     handle: "@trash_dev",
     message: "",
   },
-  sekeidesign: {
-    handle: "@sekeidesign",
-    message: "test bish",
-  },
+  //   sekeidesign: {
+  //     handle: "@sekeidesign",
+  //     message: "test bish",
+  //   },
 };
 
 export default shoutouts;

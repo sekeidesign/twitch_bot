@@ -24,13 +24,19 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
 
   if (shoutouts[userAccessor] && !streamFrenz[userAccessor]) {
     const streamerInfo = shoutouts[userAccessor];
-    console.log(streamerInfo);
-
-    //
     streamFrenz[userAccessor] = true;
     ComfyJS.Say(
       `Shoutout to ${streamerInfo.handle}, ${streamerInfo.message}. Check them out at https://twitch.tv/${userAccessor}`
     );
+  }
+};
+
+ComfyJS.onRaid = (user, viewers) => {
+  const userAccessor = user.toLowerCase();
+  if (viewers > 1 && !streamFrenz[userAccessor]) {
+    streamFrenz[userAccessor] = true;
+    console.log(user, "raided");
+    ComfyJS.Say(`!so @${userAccessor}`);
   }
 };
 
