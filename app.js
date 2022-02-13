@@ -19,4 +19,5 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
         }
     }
 }
+
 ComfyJS.Init( "sekeidesign" );
