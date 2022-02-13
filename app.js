@@ -12,9 +12,12 @@ ComfyJS.onChat = ( user, message, flags, self, extra ) => {
             console.log('Try another theme name')
         } else {
             console.log("Switching to", message)
-            changeLights(3, true, themes[message][0].hue, themes[message][0].sat, themes[message][0].bri)
-            changeLights(5, true, themes[message][1].hue, themes[message][1].sat, themes[message][1].bri)
+            const light0 = themes[message][0]
+            const light1 = themes[message][1]
+            changeLights(3, true, light0.hue, light0.sat, light0.bri)
+            changeLights(5, true, light1.hue, light1.sat, light1.bri)
         }
     }
 }
+
 ComfyJS.Init( "sekeidesign" );
