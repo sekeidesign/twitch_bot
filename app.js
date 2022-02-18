@@ -9,12 +9,13 @@ const streamFrenz = {};
 const themeNames = ["fairfax", "osaka", "tokyo", "motown", "starlight"];
 ComfyJS.onChat = (user, message, flags, self, extra) => {
   if (extra.customRewardId === "2e881bbe-fd0c-4223-b35b-21a8f2877f95") {
-    if (themeNames.indexOf(message.toLowerCase()) === -1) {
+    const themeRequest = message.toLocaleLowerCase();
+    if (themeNames.indexOf(themeRequest) === -1) {
       console.log("Try another theme name");
     } else {
-      console.log("Switching to", message);
-      const light0 = themes[message][0];
-      const light1 = themes[message][1];
+      console.log("Switching to", themeRequest);
+      const light0 = themes[themeRequest][0];
+      const light1 = themes[themeRequest][1];
       changeLights(3, true, light0.hue, light0.sat, light0.bri);
       changeLights(5, true, light1.hue, light1.sat, light1.bri);
     }
