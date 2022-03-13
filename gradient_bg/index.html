@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Background</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div style="width: 100vw; height: 100vh; overflow: hidden">
+      <canvas
+        id="gradient-canvas"
+        data-js-darken-top
+        data-transition-in
+      ></canvas>
+    </div>
+    <script src="gradientWave.js"></script>
+    <script src="socketClient.js"></script>
+    <!-- <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+    <script>
+        var sf = new Snowflakes({
+            color: "#FFF",
+            count: 35,
+            minOpacity: 0.3,
+            maxOpacity: 1,
+            minSize: 20,
+            maxSize: 60
+        });
+    </script> -->
+  </body>
+</html>

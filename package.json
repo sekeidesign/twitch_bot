@@ -13,7 +13,9 @@
 	"license": "ISC",
 	"dependencies": {
 		"axios": "^0.25.0",
-		"comfy.js": "^1.1.13"
+		"comfy.js": "^1.1.13",
+		"express": "^4.17.3",
+		"ws": "^8.5.0"
 	},
 	"devDependencies": {
 		"dotenv": "^16.0.0",
