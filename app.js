@@ -24,7 +24,7 @@ app.listen(port, () => {
 });
 
 //console.log(process.env.TWITCH_USER);
-const streamFrenz = { aaoa_: true };
+const streamFrenz = {};
 
 const themeNames = ['fairfax', 'osaka', 'tokyo', 'motown', 'starlight'];
 ComfyJS.onChat = (user, message, flags, self, extra) => {
