@@ -32,6 +32,16 @@ const shoutouts = {
     handle: '@trash_dev',
     message: "he's trashy, but we love him <3 (at least some of us do 👀)",
   },
+  splashley: {
+    handle: '@splashley',
+    message:
+      'a wonderful developer, pixel artist, fellow Canadian, and mom to a whole lot of cute cats! 🐱',
+  },
+  potpot_ux: {
+    handle: '@potpot_ux',
+    message:
+      'a lovely coworking streamer! If you`re looking for chill and productive vibes, look no further ☕️',
+  },
   //   sekeidesign: {
   //     handle: "@sekeidesign",
   //     message: "test bish",
