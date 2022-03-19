@@ -1,7 +1,7 @@
 import ComfyJS from 'comfy.js';
-import themes from './Lights/hueThemes.js';
-import bgThemes from './gradient_bg/bgThemes.js';
+import bgThemes from './themes.js';
 import changeLights from './Lights/hueControls.js';
+import toLight from './toLight.js';
 import shoutouts from './Shoutouts/shoutouts.js';
 import express from 'express';
 import * as http from 'http';
@@ -32,7 +32,7 @@ server.listen(port, () => {
 //console.log(process.env.TWITCH_USER);
 const streamFrenz = {};
 
-const themeNames = ['fairfax', 'osaka', 'tokyo', 'motown', 'starlight'];
+const themeNames = Object.keys(bgThemes);
 ComfyJS.onChat = (user, message, flags, self, extra) => {
   if (extra.customRewardId === '2e881bbe-fd0c-4223-b35b-21a8f2877f95') {
     const themeRequest = message.toLocaleLowerCase();
@@ -40,8 +40,8 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
       console.log('Try another theme name');
     } else {
       console.log('Switching to', themeRequest);
-      const light0 = themes[themeRequest][0];
-      const light1 = themes[themeRequest][1];
+      const light0 = toLight(bgThemes[themeRequest][0]);
+      const light1 = toLight(bgThemes[themeRequest][1]);
       changeLights(3, true, light0.hue, light0.sat, light0.bri);
       changeLights(5, true, light1.hue, light1.sat, light1.bri);
 
