@@ -7,7 +7,7 @@ const pomoIntervals = {
   },
   shortBreak: {
     name: 'Short break',
-    duration: 300,
+    duration: 10,
   },
   longBreak: {
     name: 'Long break',
@@ -31,8 +31,8 @@ class TimerActions {
   play() {
     isRunning.value = true;
     intervalHandle.value = setInterval(() => {
-      if (timer.value === 0) {
-        console.log('next session');
+      if (timer.value === 1) {
+        this.skip();
       } else {
         timer.value--;
       }
@@ -99,8 +99,7 @@ const currentSession = ref(0);
     <div>
       Time:
       {{ timer }}
-      isRunning:
-      {{ isRunning }}
+      {{ pomoIntervals[pomoSessions[currentSession]].name }}
       Session:
       {{ currentSession + 1 }} / {{ pomoSessions.length }}
     </div>
