@@ -22,7 +22,7 @@ const shoutouts = {
   mewtru: {
     handle: '@mewtru',
     message:
-      'the kween of code, and a lovely dev advocate at the one and only Loom',
+      "the kween of code, and god tier 10x developer at Discord (blame her if you don't like something)",
   },
   vapejuicejordan: {
     handle: '@vapejuicejordan',
@@ -42,10 +42,10 @@ const shoutouts = {
     message:
       'a lovely coworking streamer! If you`re looking for chill and productive vibes, look no further ☕️',
   },
-  //   sekeidesign: {
-  //     handle: "@sekeidesign",
-  //     message: "test bish",
-  //   },
+  // sekeidesign: {
+  //   handle: '@sekeidesign',
+  //   message: 'test bish',
+  // },
 };
 
 export default shoutouts;
