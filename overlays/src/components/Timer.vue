@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+
 const pomoIntervals = {
   focus: {
     name: 'Focus',
@@ -14,6 +15,7 @@ const pomoIntervals = {
     duration: 900,
   },
 };
+
 const pomoSessions = [
   'focus',
   'shortBreak',
@@ -60,6 +62,7 @@ class TimerActions {
     console.log('reset');
   }
 }
+
 const timerActions = new TimerActions();
 
 const timerButtons = {

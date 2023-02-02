@@ -29,13 +29,12 @@ server.listen(port, () => {
 });
 
 //**-------------------------------------------- */
-//console.log(process.env.TWITCH_USER);
 const streamFrenz = {};
 
 const themeNames = Object.keys(bgThemes);
 ComfyJS.onChat = (user, message, flags, self, extra) => {
   if (extra.customRewardId === '2e881bbe-fd0c-4223-b35b-21a8f2877f95') {
-    const themeRequest = message.toLocaleLowerCase();
+    const themeRequest = message.toLowerCase();
     if (themeNames.indexOf(themeRequest) === -1) {
       console.log('Try another theme name');
     } else {
@@ -57,6 +56,7 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
     ComfyJS.Say(
       `Shoutout to ${streamerInfo.handle}, ${streamerInfo.message}. Check them out at https://twitch.tv/${userAccessor}`
     );
+    console.log('suck my pp', userAccessor);
   }
 };
 
@@ -69,4 +69,5 @@ ComfyJS.onRaid = (user, viewers) => {
   }
 };
 
-ComfyJS.Init(process.env.TWITCH_USER, process.env.OAUTH);
+const { TWITCH_USER, OAUTH } = process.env;
+ComfyJS.Init(TWITCH_USER, OAUTH);
