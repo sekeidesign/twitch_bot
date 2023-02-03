@@ -32,6 +32,9 @@ const intervalHandle = ref(null);
 class TimerActions {
   play() {
     isRunning.value = true;
+    if (intervalHandle) {
+      clearInterval(intervalHandle.value);
+    }
     intervalHandle.value = setInterval(() => {
       if (timer.value === 1) {
         this.skip();

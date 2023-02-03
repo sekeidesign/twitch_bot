@@ -1,7 +1,7 @@
 import ComfyJS from 'comfy.js';
-import bgThemes from './themes.js';
+import bgThemes from './Lights/themes.js';
 import changeLights from './Lights/hueControls.js';
-import toLight from './toLight.js';
+import toLight from './Lights/toLight.js';
 import shoutouts from './Shoutouts/shoutouts.js';
 import express from 'express';
 import * as http from 'http';
@@ -41,8 +41,14 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
       console.log('Switching to', themeRequest);
       const light0 = toLight(bgThemes[themeRequest][0]);
       const light1 = toLight(bgThemes[themeRequest][1]);
-      changeLights(3, true, light0.hue, light0.sat, light0.bri);
-      changeLights(5, true, light1.hue, light1.sat, light1.bri);
+      const light2 = toLight(bgThemes[themeRequest][2]);
+      const light3 = toLight(bgThemes[themeRequest][3]);
+      changeLights(1, true, light0.hue, light0.sat, light0.bri);
+      changeLights(3, true, light1.hue, light1.sat, light1.bri);
+      changeLights(4, true, light2.hue, light2.sat, light2.bri);
+      changeLights(5, true, light2.hue, light2.sat, light2.bri);
+      changeLights(6, true, light2.hue, light2.sat, light2.bri);
+      changeLights(7, true, light3.hue, light3.sat, light3.bri);
 
       io.emit('Theme change', { theme: bgThemes[themeRequest] });
     }
