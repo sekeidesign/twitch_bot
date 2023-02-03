@@ -1,9 +1,9 @@
 const shoutouts = {
-  tg_khalil: {
-    handle: '@tg_khalil',
-    message:
-      "Do you feel those positive vibes? That's Khalil, a super zen co-working designer with an adorable kitty. Ask about Floki! 🐱",
-  },
+  // tg_khalil: {
+  //   handle: '@tg_khalil',
+  //   message:
+  //     "Do you feel those positive vibes? That's Khalil, a super zen co-working designer with an adorable kitty. Ask about Floki! 🐱",
+  // },
   aaoa_: {
     handle: '@aaoa_',
     message:
