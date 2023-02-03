@@ -102,7 +102,7 @@ const nextSession = computed(() =>
 
 <template>
   <div
-    class="flex-grow group bg-slate-100 rounded-md overflow-hidden relative flex gap-2 p-6 items-center justify-between"
+    class="h-full border-2 border-slate-300 flex-grow group bg-slate-100 rounded-md overflow-hidden relative flex gap-2 p-6 items-center justify-between"
   >
     <div class="z-20">
       <div class="relative text-lg leading-7 font-semibold text-slate-500">
@@ -146,7 +146,7 @@ const nextSession = computed(() =>
       </button>
     </div>
     <div
-      class="bg-slate-300 w-full h-full absolute inset-0 z-10 origin-left"
+      class="bg-slate-300 w-full h-full absolute inset-0 z-10 origin-left border-r-2 border-slate-400"
       :style="{ transform: `scaleX(${timerProgress})` }"
     ></div>
   </div>

@@ -12,7 +12,7 @@ const handleInputClick = () => {
 };
 </script>
 <template>
-  <div class="flex flex-col flex-grow gap-4 focus-scene:gap-1">
+  <div class="flex flex-col flex-grow gap-1 focus-scene:gap-1">
     <span class="text-lg leading-7 font-medium text-slate-500"
       >Current goal</span
     >

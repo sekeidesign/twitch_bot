@@ -5,13 +5,10 @@ import Timer from './components/Timer.vue';
 </script>
 
 <template>
-  <div
-    class="p-6 h-full flex flex-col space-between focus-scene:gap-6 focus-scene:flex-row focus-scene:items-center text-slate-900"
-  >
-    <Notification username="blkxdzn" action="Followed" />
+  <div class="h-full flex items-center text-slate-900">
+    <router-view></router-view>
+    <!-- <Notification username="blkxdzn" action="Followed" />
     <Goal />
-    <Timer />
+    <Timer /> -->
   </div>
 </template>
-
-<style scoped></style>
