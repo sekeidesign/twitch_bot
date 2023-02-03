@@ -62,7 +62,7 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
     ComfyJS.Say(
       `Shoutout to ${streamerInfo.handle}, ${streamerInfo.message}. Check them out at https://twitch.tv/${userAccessor}`
     );
-    console.log('suck my pp', userAccessor);
+    // console.log('suck my pp', userAccessor);
   }
 };
 
